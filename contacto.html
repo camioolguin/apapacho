@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.ico"/>
-
+    <link rel="icon" href="images/favicon.ico" />
 </head>
 
 <body>
@@ -28,28 +29,49 @@
         </nav>
     </header>
 
-    <section class="contacto">
-        <div class="mapa">
+    <section class="contacto row">
+        <div class="col-12 col-sm-6">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.8316558720785!2d-64.20986608556362!3d-31.36362440083867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329936e2b1238b%3A0x1a3f4ecee6ece060!2sAPAPACHO%20Cer%C3%A1mica!5e0!3m2!1sen!2sin!4v1647186680687!5m2!1sen!2sin"
-                width="500" height="450" style="border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+                width="100%" height="450" style="border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-        <div class="formulario">
+        <div class="col-12 col-sm-6">
             <form>
-                <h1>Contactanos</h1>
-                <div class="input">
-                    <span class="fas fa-user"></span>
-                    <input type="text" placeholder="Nombre">
+                <h1 class="titulo m-4">Contactanos</h1>
+
+                <div class="row mb-3 pb-4">
+                    <label class="col-auto col-form-label">
+                        <span class="fas fa-user"></span>
+                    </label>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nombre">
+                    </div>
                 </div>
-                <div class="input">
-                    <span class="fas fa-envelope"></span>
-                    <input type="email" placeholder="Correo">
+
+                <div class="row mb-3 pb-4">
+                    <label class="col-auto col-form-label">
+                        <span class="fas fa-envelope"></span>
+                    </label>
+                    <div class="col">
+                        <input type="email" class="form-control" placeholder="Correo">
+                    </div>
                 </div>
-                <div class="input">
-                    <span class="fas fa-message"></span>
-                    <input type="text" placeholder="Mensaje">
+
+                <div class="row mb-3 pb-4">
+                    <label class="col-auto col-form-label">
+                        <span class="fas fa-message"></span>
+                    </label>
+                    <div class="form-floating col">
+                        <textarea class="form-control" placeholder="Deja tu mensaje aquí" id="floatingTextarea"
+                            style="height: 100px"></textarea>
+                        <label for="floatingTextarea">Dejanos tu mensaje!</label>
+                    </div>
                 </div>
-                <button type="submit">Enviar</button>
+
+                <div class="d-grid gap-2">
+                    <button class="btn" type="button">Enviar</button>
+                </div>
+
             </form>
         </div>
     </section>
@@ -60,10 +82,18 @@
             <a href="https://www.instagram.com/apapacho_ceramica/" class="fab fa-instagram"></a>
             <a href="#" class="fab fa-whatsapp"></a>
         </div>
-        <div class="credito"> <p>Creado por</p> <a href="https://www.linkedin.com/in/camila-olguin/">Camila Olguin</a></div>
+        <div class="credito">
+            <p>Creado por</p> <a href="https://www.linkedin.com/in/camila-olguin/">Camila Olguin</a>
+        </div>
     </footer>
 </body>
 
 </html>
 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/808f36d3e2.js" crossorigin="anonymous"></script>
