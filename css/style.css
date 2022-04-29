@@ -27,15 +27,15 @@
 /* INDEX */
 .frase {
   font-size: 50px;
-  color: white;
+  color: whitesmoke;
   text-shadow: 4px 4px 3px rgba(96, 88, 80, 0.4);
 }
 
 .firma {
-  font-size: 35px;
   font-family: "Neucha";
   letter-spacing: 3px;
-  color: white;
+  font-size: 20px;
+  color: whitesmoke;
   text-shadow: 4px 4px 3px rgba(96, 88, 80, 0.4);
 }
 
@@ -45,8 +45,8 @@
 
 .texto-card-b {
   font-family: "Neucha";
+  letter-spacing: 3px;
   font-size: 20px;
-  letter-spacing: 2px;
 }
 
 .card-img :hover {
@@ -160,9 +160,9 @@ footer .credito {
 }
 footer .credito a {
   color: whitesmoke;
-  font-size: 19px;
   font-family: "Neucha";
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {
