@@ -28,10 +28,11 @@
 .frase {
   font-size: 50px;
   color: #605850;
-  text-shadow: 4px 4px 3px rgba(96, 88, 80, 0.4);
+  text-shadow: 2px 2px 4px rgba(23, 23, 23, 0.6);
 }
 
 .firma {
+  font-we: bold;
   font-family: "Neucha";
   letter-spacing: 3px;
   font-size: 30px;
@@ -40,7 +41,10 @@
 }
 
 .carousel .carousel-item {
-  height: 400px;
+  height: 500px;
+}
+.carousel .carousel-item img {
+  opacity: 0.7;
 }
 
 .texto-card-b {
@@ -125,28 +129,6 @@
   transform: rotate(10deg);
 }
 
-.block-4 {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  position: absolute;
-  transform: rotate(0deg);
-  transition: all 0.5s;
-  opacity: 70%;
-  background-image: linear-gradient(to right top, #c8cccf, #d6d9dc);
-}
-
-.block-5 {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  position: absolute;
-  transform: rotate(0deg);
-  transition: all 0.5s;
-  opacity: 90%;
-  background-image: linear-gradient(to right top, #c2c0c1, #dbdadf);
-}
-
 /* GALERIA */
 .zoom-in {
   width: 100%;
@@ -165,18 +147,6 @@
   transform: scale(1.1);
 }
 
-.videos h3 {
-  text-align: center;
-  color: #605850;
-  font-size: 27px;
-  padding: 10px;
-}
-
-.video {
-  display: flex;
-  justify-content: center;
-}
-
 /* INDIVIDUALES Y SETS */
 .container1 {
   display: grid;
@@ -192,9 +162,6 @@
 .container-box img {
   width: 240px;
   opacity: 0.5;
-}
-.container-box h4 {
-  text-align: left;
 }
 .container-box button {
   visibility: hidden;
@@ -267,20 +234,20 @@ footer .credito a {
 
 @media (max-width: 768px) {
   .titulo {
-    font-size: 30px;
+    font-size: 26px;
     padding: 10px;
   }
 
   .frase {
-    font-size: 30px;
+    font-size: 27px;
   }
 
   .firma {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .carousel .carousel-item {
-    height: 170px;
+    height: 150px;
   }
 
   .container-box img {
@@ -288,6 +255,10 @@ footer .credito a {
   }
 
   .container-box h4 {
+    font-size: 22px;
+  }
+
+  .container-box h5 {
     font-size: 18px;
   }
 }
