@@ -32,7 +32,6 @@
 }
 
 .firma {
-  font-we: bold;
   font-family: "Neucha";
   letter-spacing: 3px;
   font-size: 30px;
@@ -41,10 +40,10 @@
 }
 
 .carousel .carousel-item {
-  height: 500px;
+  height: 400px;
 }
 .carousel .carousel-item img {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .texto-card-b {
