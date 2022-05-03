@@ -17,6 +17,15 @@ $color:(
     font-size: 20px;
 }
 
+@mixin blockEffect{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: all 0.5s
+}
+
 /* GENERALES */
 .titulo {
     font-size: 40px;
@@ -27,7 +36,6 @@ $color:(
 }
 
 /* HEADER */
-
 .navbar{
     .nav-link {
         color: map-get($map: $color, $key: 'oscuro');
@@ -37,20 +45,21 @@ $color:(
             text-decoration: underline;
         }
     }
-
 } 
 
 
 /* INDEX */
 .frase {
     font-size: 50px;
-    color: map-get($map: $color, $key: 'fakeWhite');
+    color: map-get($map: $color, $key: 'oscuro');
     text-shadow: 4px 4px 3px rgba(96, 88, 80, 0.40);
 }
 
 .firma {
-    @include letraNeucha();
-    color: map-get($map: $color, $key: 'fakeWhite');
+    font-family: "Neucha";
+    letter-spacing: 3px;
+    font-size: 30px;
+    color: map-get($map: $color, $key: 'oscuro');
     text-shadow: 4px 4px 3px rgba(96, 88, 80, 0.40);
 }
 
@@ -64,6 +73,76 @@ $color:(
 
 .card-img :hover {
     transform: scale(1.1);
+}
+
+.block {
+    height: 370px;
+    width: 320px;
+    position: relative;
+    text-align: center;
+        span{
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        a{
+            @include letraNeucha();
+            color: map-get($map: $color, $key: 'oscuro');
+            z-index: 1;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+}
+
+.block-1 {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 100;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                background-position: cover;
+                transition: all 0.5s;
+                cursor: pointer;
+                object-fit: fill;
+        }
+}
+
+.block-2 {
+    @include blockEffect();
+    opacity: 30%;
+    background-image: linear-gradient(to right top,  #f3e8dc, #d6bda9);
+}
+.block:hover .block-2{
+    transform: rotate(-14deg);
+}
+
+.block-3 {
+    @include blockEffect();
+    opacity: 50%;
+    background-image: linear-gradient(to right top, #ebd9cd, #d9b7a6);
+}
+.block:hover .block-3{
+    transform: rotate(10deg);
+}
+
+.block-4 {
+    @include blockEffect();
+    opacity: 70%;
+    background-image: linear-gradient(to right top, #c8cccf, #d6d9dc);
+}
+
+.block-5 {
+    @include blockEffect();
+    opacity: 90%;
+    background-image: linear-gradient(to right top, #c2c0c1, #dbdadf);
 }
 
 
@@ -98,14 +177,6 @@ $color:(
     justify-content: center;
 }
 
-.video .insta1 {
-    width: 50%;
-}
-
-.video .insta2 {
-    width: 50%;
-}
-
 /* INDIVIDUALES Y SETS */
 .container1 {
     display: grid;
@@ -120,15 +191,28 @@ $color:(
                 img {
                     width: 240px;
                     opacity: .5;
-                    &:hover{
-                        opacity: 1;
-                    }
+                    
                 }
 
                 h4 {
-                    text-align: center;
+                    text-align: left;
                 }
+                button{
+                    visibility: hidden;
+                    transform: translateY(-107px);
+                    border-radius: 0;
+                    text-align: center;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+}
 
+.container-box:hover button{
+    visibility: visible;
+}
+.container-box:hover img{
+    opacity: 1;
 }
 
 .contacto {
@@ -186,6 +270,9 @@ footer {
         }
 }
 
+
+
+
 @media (max-width: 768px) {
 
     .titulo {
@@ -194,19 +281,23 @@ footer {
     } 
 
     .frase {
-        font-size: 40px;
+        font-size: 30px;
     }
     
     .firma {
-        font-size: 25px;
+        font-size: 20px;
     }
     
     .carousel .carousel-item {
-        height: 200px;
+        height: 170px;
     }
 
     .container-box img {
         opacity: 1;
+    }
+
+    .container-box h4{
+        font-size: 18px;
     }
 }
 
